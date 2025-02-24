@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model VaiTro {
+  id          Int            @id @default(autoincrement())
+  Ten         String
+  users       User[]
+  permissions VaiTro_Quyen[]
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  UserName String  @unique @db.VarChar(255)
+  MatKhau  String? @db.VarChar(225)
+  Hoten    String? @db.VarChar(225)
+  phone    String? @db.VarChar(15)
+  email    String? @db.VarChar(100)
+  MaVaiTro Int
+  vaitro   VaiTro? @relation(fields: [MaVaiTro], references: [id])
+
+  Pets Pets[]
+
+  Adoptions Adoptions[]
+
+  EventParticipants EventParticipants[]
+
+  Schedule Schedule[]
+
+  Payments Payments[]
+}
+
+model Pets {
+  id_pets       Int         @id @default(autoincrement())
+  name          String?
+  breed         String?
+  age           Int?
+  health_status String?
+  id_users      Int
+  users         User        @relation(fields: [id_users], references: [id])
+  Adoptions     Adoptions[]
+  Schedule      Schedule[]
+}
+
+model Adoptions {
+  id_adoptions Int     @id @default(autoincrement())
+  id_users     Int?
+  id_pets      Int?
+  status       String?
+  users        User?   @relation(fields: [id_users], references: [id])
+  Pets         Pets?   @relation(fields: [id_pets], references: [id_pets])
+}
+
+model events {
+  id_events         Int                 @id @default(autoincrement())
+  title             String?
+  description       String?
+  Event_date        DateTime?
+  EventParticipants EventParticipants[]
+  Schedule          Schedule[]
+}
+
+model EventParticipants {
+  id_EventParticipants Int     @id @default(autoincrement())
+  id_events            Int?
+  id_users             Int?
+  events               events? @relation(fields: [id_events], references: [id_events])
+  users                User?   @relation(fields: [id_users], references: [id])
+}
+
+model Products {
+  id_Products Int     @id @default(autoincrement())
+  name        String
+  Description String?
+  Price       Decimal
+  images      String?
+}
+
+model Donations {
+  id_Donations Int     @id @default(autoincrement())
+  Name         String?
+  email        String?
+  phonenumber  String?
+  Amount       Decimal
+}
+
+model Schedule {
+  id_Schedule   Int      @id @default(autoincrement())
+  id_users      Int
+  id_pets       Int?
+  id_events     Int?
+  Schedule_date DateTime
+  status        String?
+  users         User     @relation(fields: [id_users], references: [id])
+  Pets          Pets?    @relation(fields: [id_pets], references: [id_pets])
+  events        events?  @relation(fields: [id_events], references: [id_events])
+}
+
+model Payments {
+  id_Payments   Int      @id @default(autoincrement())
+  id_users      Int
+  amount        Decimal?
+  PaymentMethod String?
+  users         User     @relation(fields: [id_users], references: [id])
+}
+
+model Quyen {
+  id    Int            @id @default(autoincrement())
+  Ten   String
+  MoTa  String?        @db.LongText
+  roles VaiTro_Quyen[]
+}
+
+model VaiTro_Quyen {
+  Id       Int    @id @default(autoincrement())
+  MaVaiTro Int
+  MaQuyen  Int
+  Ten      String
+  vaitro   VaiTro @relation(fields: [MaVaiTro], references: [id])
+  quyen    Quyen  @relation(fields: [MaQuyen], references: [id])
+}
