@@ -53,8 +53,12 @@ const Navbar = () => {
             alt="logo"
           />
         </div>
-
-        <ul className="hidden lg:flex gap-5 font-Karla">
+        <ul className="hidden lg:flex gap-5 font-Karla items-center">
+          <img
+            src="/images/notification.jpg"
+            alt="Thong Bao"
+            className="h-8 w-8 mr-3 "
+          />
           {/* Hiển thị thông tin người dùng nếu đã đăng nhập */}
           {user ? (
             <li className="relative">
@@ -75,7 +79,7 @@ const Navbar = () => {
                     <li>
                       <div className="flex justify-around">
                         <a onClick={handleLogout} className="text-lg">
-                          Logout
+                          Đăng xuất
                         </a>
                         <div className="text-xl pr-9">
                           <MdOutlineLogout />
@@ -98,6 +102,13 @@ const Navbar = () => {
               </div>
             </>
           )}
+          {/* <div className="flex justify-around pr-5">
+            <img
+              src="/images/notification.jpg"
+              alt="Thong Bao"
+              className="h-8 w-12 mr-8"
+            />
+          </div> */}
         </ul>
         <div className="lg:hidden size-5" onClick={toggleMenu}>
           <TiThMenuOutline />
