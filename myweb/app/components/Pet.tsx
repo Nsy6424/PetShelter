@@ -178,9 +178,6 @@ const PetPage: React.FC = () => {
                 <p className="text-gray-500">
                   Tiêm phòng: {product.vaccination}
                 </p>
-                <p className="text-gray-500">
-                  Tính cách: {product.personality}
-                </p>
 
                 <button className="mt-4 bg-green-600 text-white py-2 px-4 rounded-full hover:bg-green-700">
                   Nhận nuôi

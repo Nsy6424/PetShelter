@@ -103,10 +103,6 @@ const PAdopt = () => {
             Hãy cùng PetShelter tạo nên một mái ấm yêu thương cho những thú cưng
             đáng yêu!
           </p>
-          <p className="mt-8 text-center text-green-800 font-semibold">
-            Hãy cùng PetShelter tạo nên một mái ấm yêu thương cho những thú cưng
-            đáng yêu!
-          </p>
         </div>
       </div>
       <div>
