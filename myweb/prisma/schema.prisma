@@ -24,27 +24,29 @@ model User {
   MaVaiTro Int
   vaitro   VaiTro? @relation(fields: [MaVaiTro], references: [id])
 
-  Pets Pets[]
-
-  Adoptions Adoptions[]
-
+  Pet               Pet[]
+  Adoptions         Adoptions[]
   EventParticipants EventParticipants[]
-
-  Schedule Schedule[]
-
-  Payments Payments[]
+  Schedule          Schedule[]
+  Payments          Payments[]
 }
 
-model Pets {
-  id_pets       Int         @id @default(autoincrement())
-  name          String?
-  breed         String?
-  age           Int?
-  health_status String?
-  id_users      Int
-  users         User        @relation(fields: [id_users], references: [id])
-  Adoptions     Adoptions[]
-  Schedule      Schedule[]
+model Pet {
+  id          Int    @id @default(autoincrement())
+  name        String
+  breed       String
+  color       String
+  age         String
+  gender      String
+  code        String
+  vaccination String
+  personality String
+  image       String @db.Text
+
+  Adoptions Adoptions[]
+  Schedule  Schedule[]
+
+  User User[]
 }
 
 model Adoptions {
@@ -53,60 +55,62 @@ model Adoptions {
   id_pets      Int?
   status       String?
   users        User?   @relation(fields: [id_users], references: [id])
-  Pets         Pets?   @relation(fields: [id_pets], references: [id_pets])
+  Pets         Pet?    @relation(fields: [id_pets], references: [id])
 }
 
-model events {
-  id_events         Int                 @id @default(autoincrement())
-  title             String?
-  description       String?
-  Event_date        DateTime?
-  EventParticipants EventParticipants[]
-  Schedule          Schedule[]
+model Events {
+  id           Int                 @id @default(autoincrement())
+  title        String?
+  description  String?
+  Event_date   DateTime?
+  participants EventParticipants[]
+  Schedule     Schedule[]
 }
 
 model EventParticipants {
-  id_EventParticipants Int     @id @default(autoincrement())
-  id_events            Int?
-  id_users             Int?
-  events               events? @relation(fields: [id_events], references: [id_events])
-  users                User?   @relation(fields: [id_users], references: [id])
+  id        Int     @id @default(autoincrement())
+  id_events Int?
+  id_users  Int?
+  events    Events? @relation(fields: [id_events], references: [id])
+  users     User?   @relation(fields: [id_users], references: [id])
 }
 
 model Products {
-  id_Products Int     @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   name        String
-  Description String?
-  Price       Decimal
+  description String?
+  price       Decimal
   images      String?
 }
 
 model Donations {
-  id_Donations Int     @id @default(autoincrement())
-  Name         String?
-  email        String?
-  phonenumber  String?
-  Amount       Decimal
+  id          Int     @id @default(autoincrement())
+  name        String?
+  email       String?
+  phonenumber String?
+  amount      Decimal
 }
 
 model Schedule {
-  id_Schedule   Int      @id @default(autoincrement())
+  id            Int      @id @default(autoincrement())
   id_users      Int
   id_pets       Int?
   id_events     Int?
   Schedule_date DateTime
   status        String?
-  users         User     @relation(fields: [id_users], references: [id])
-  Pets          Pets?    @relation(fields: [id_pets], references: [id_pets])
-  events        events?  @relation(fields: [id_events], references: [id_events])
+
+  users  User    @relation(fields: [id_users], references: [id])
+  pets   Pet?    @relation(fields: [id_pets], references: [id])
+  events Events? @relation(fields: [id_events], references: [id])
 }
 
 model Payments {
-  id_Payments   Int      @id @default(autoincrement())
+  id            Int      @id @default(autoincrement())
   id_users      Int
   amount        Decimal?
   PaymentMethod String?
-  users         User     @relation(fields: [id_users], references: [id])
+
+  users User @relation(fields: [id_users], references: [id])
 }
 
 model Quyen {
@@ -117,10 +121,11 @@ model Quyen {
 }
 
 model VaiTro_Quyen {
-  Id       Int    @id @default(autoincrement())
+  id       Int    @id @default(autoincrement())
   MaVaiTro Int
   MaQuyen  Int
   Ten      String
-  vaitro   VaiTro @relation(fields: [MaVaiTro], references: [id])
-  quyen    Quyen  @relation(fields: [MaQuyen], references: [id])
+
+  vaitro VaiTro @relation(fields: [MaVaiTro], references: [id])
+  quyen  Quyen  @relation(fields: [MaQuyen], references: [id])
 }

@@ -3,11 +3,11 @@ import LoginFormSchema from "@/app/zodschema/zodlogin/route";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 const LoginForm = () => {
   const [error, setError] = useState("");
   const router = useRouter();
-
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
@@ -34,7 +34,6 @@ const LoginForm = () => {
       });
 
       const data = await res.json();
-      console.log("API response data:", data);
 
       if (!res.ok) {
         throw new Error(data.error || "Đăng nhập thất bại");
@@ -42,26 +41,19 @@ const LoginForm = () => {
       toast.success("Đăng nhập thành công");
       console.log("Login response:", data);
 
-      // Check if the user object and vaitro property exist
-      if (data.user && data.user.vaitro) {
-        console.log("User role:", data.user.vaitro);
-        if (data.user.vaitro === "user") {
-          console.log("Redirecting to /user");
-          router.push("/user");
-        } else {
-          console.log("Redirecting to /");
-          router.push("/");
-        }
+      if (data.user?.vaitro === "Admin") {
+        router.push("/admin");
       } else {
-        console.error("User role not found in response:", data);
-        setError("User role not found");
-        toast.error("User role not found");
+        router.push("/");
       }
       router.refresh();
-    } catch (error: any) {
-      console.error("Login error:", error);
-      setError(error.message);
-      toast.error(error.message);
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Thông tin đăng nhập không hợp lệ");
+        toast.error("Thông tin đăng nhập không hợp lệ");
+      }
     }
   }
 
@@ -69,12 +61,7 @@ const LoginForm = () => {
     <div className="flex gap-10 bg-gray-200 w-full min-h-screen items-center justify-center">
       <div className="flex items-center justify-center">
         <a href="/" title="Về trang chủ">
-          <img
-            src="https://cdn.discordapp.com/attachments/1300816466379014237/1343127462845874217/image.png?ex=67bc246d&is=67bad2ed&hm=06978354166f049bdb6238e81e7bfec133126f140c52a2bfe6a8ee0df888e8c5&"
-            alt="logo"
-            width={400}
-            height={400}
-          />
+          <Image src="/images/logo.png" alt="logo" width={400} height={400} />
         </a>
       </div>
 

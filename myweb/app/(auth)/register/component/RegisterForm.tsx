@@ -108,7 +108,7 @@ const RegisterForm = () => {
                 className="btn bg-green-700 text-white w-[400px]"
               >
                 Tạo tài khoản
-              </button>
+              </button>                                                                                                                                                                                                                                                                                                                                                
             </div>
           </form>
         </div>

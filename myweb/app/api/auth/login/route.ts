@@ -1,5 +1,6 @@
 import { login } from "@/app/lib/auth";
 import LoginFormSchema from "@/app/zodschema/zodlogin/route";
+import { error } from "console";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -7,33 +8,21 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const result = LoginFormSchema.safeParse(body);
     if (!result.success) {
-      const errorMessages = result.error.issues
-        .map((issue) => issue.message)
-        .join(", ");
-      return NextResponse.json({ error: errorMessages }, { status: 400 });
-    }
-
-    const { UserName, MatKhau } = result.data;
-
-    // Authenticate user
-    const user = await login(UserName, MatKhau);
-
-    if (!user) {
       return NextResponse.json(
-        { error: "Tên đăng nhập hoặc mật khẩu không đúng" },
-        { status: 401 }
+        { error: result.error.issues[0].message },
+        { status: 400 }
       );
     }
-
+    const { UserName, MatKhau } = result.data;
+    const user = await login(UserName, MatKhau);
     return NextResponse.json(
       { user, message: "Đăng nhập thành công" },
       { status: 200 }
     );
   } catch (error) {
-    console.error(error);
     return NextResponse.json(
-      { error: "Đã xảy ra lỗi khi xử lý yêu cầu" },
-      { status: 500 }
+      { error: "Authentication failed" },
+      { status: 401 }
     );
   }
 }

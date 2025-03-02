@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-
+import coco from "./images/coco.png";
 const PetPage: React.FC = () => {
   // State kiểm tra mở dropdown
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,18 +9,22 @@ const PetPage: React.FC = () => {
   // Mảng dữ liệu 12 sản phẩm
   const productss = [
     {
-      name: "Coco",
+      name: "Cocio",
+      breed: "Chó",
+      color: "Đen",
       age: "Trẻ",
       gender: "Đực",
-      vaccine: "Chưa rõ",
-      image: "/images/bo.jpg",
+      code: "C2100",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
+      image: "/images/coco.png",
     },
     {
       name: "Bo",
       age: "Trẻ",
       gender: "Đực",
       vaccine: "Chưa rõ",
-      image: "/images/bo.jpg",
+      image: "/images/coco.png",
     },
     {
       name: "Lili",

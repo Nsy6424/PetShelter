@@ -8,25 +8,20 @@ import Pet from "./components/Pet";
 import News from "./components/News";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import Taitro from "./components/Taitro";
 export default function Home() {
   return (
     <div>
       <Navbar></Navbar>
       <Homepage />
-      <Information />
+      <Information/>
       <Carousel />
       <Product />
       <Pet></Pet>
       <News />
       <Banner></Banner>
+      <Taitro></Taitro>
       <Footer />
-      {/* <div className="text-center mt-4">
-            <div className="w-full text-sm">
-              <a href="/register" className="text-blue-600 hover:underline">
-                Need an account? Sign Up
-              </a>
-            </div>
-          </div> */}
     </div>
   );
 }
