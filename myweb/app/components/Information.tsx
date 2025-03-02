@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Information = () => {
   return (
     <div>
-        <div className="bg-gray-100 p-10 text-center">
+      <div className="bg-gray-100 p-10 text-center">
         <p className="text-xl text-gray-800">
           PetShelter là nền tảng kết nối cộng đồng yêu thú cưng, với sứ mệnh cứu
           hộ, chăm sóc và tìm mái ấm cho những thú cưng bị bỏ rơi, hoang lạc,
@@ -51,14 +51,14 @@ const Information = () => {
 
         <div className="w-full md:w-1/2 ">
           <img
-            src="https://cdn.discordapp.com/attachments/1300816466379014237/1343060737102319727/image.png?ex=67bbe648&is=67ba94c8&hm=2b7762c23d20046856895537d7c640494deb69a5aafbc2f7078c65d057fce6e7&"
+            src="/images/information.png"
             alt="Pet Shelter"
             className="w-full h-auto rounded-lg "
           />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Information
+export default Information;

@@ -14,36 +14,35 @@ const products: Product[] = [
     name: "Chó Nâu",
     price: "19,000",
     oldPrice: "30,000",
-    image:
-      "https://cdn.discordapp.com/attachments/1300816466379014237/1341972477491937364/image.png?ex=67b7f0c3&is=67b69f43&hm=d10754e58fbc6e97e1008ecb39bed6a26e55d96fc438f0928bc12b6dce29bde1&",
+    image: "/images/sp1.png",
   },
   {
     name: "Lịch Mèo",
     price: "19,000",
     oldPrice: "40,000",
     image:
-      "https://cdn.discordapp.com/attachments/1300816466379014237/1341975485122609242/image.png?ex=67b7f390&is=67b6a210&hm=c5a46df336bcfff1741239a7c71791a2e3c8ba634b554573bd362fdfdbdc7b88&",
+      "/images/sp2.png",
   },
   {
     name: "3 Chú mèo",
     price: "109,000",
     oldPrice: "130,000",
     image:
-      "https://cdn.discordapp.com/attachments/1300816466379014237/1341978558746329188/image.png?ex=67bb422d&is=67b9f0ad&hm=1ce52738cc00ef63abcf53b34e894d90885438f61fcd43b924abdc2d90917525&",
+      "/images/sp3.png",
   },
   {
     name: "Mèo Trắng",
     price: "10,000",
     oldPrice: "20,000",
     image:
-      "https://cdn.discordapp.com/attachments/1300816466379014237/1341978727168610447/image.png?ex=67b7f695&is=67b6a515&hm=6507978f77feb8b0d6c21b2cdfd5d0fd6f58d2f945e8883602c7b0d51005760a&",
+      "/images/sp4.png",
   },
   {
     name: "Chân Gỗ",
     price: "59,000",
     oldPrice: "70,000",
     image:
-      "https://cdn.discordapp.com/attachments/1300816466379014237/1341978676283179090/image.png?ex=67bb4249&is=67b9f0c9&hm=bf699a5df082fe4245a054eadd07ab40abc905fb63c7d72c4082a624e1624bb1&",
+      "/images/sp5.png",
   },
   {
     name: "Sen đá",

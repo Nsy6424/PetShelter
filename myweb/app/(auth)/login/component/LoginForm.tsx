@@ -1,9 +1,9 @@
 "use client";
 import LoginFormSchema from "@/app/zodschema/zodlogin/route";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import Image from "next/image";
 
 const LoginForm = () => {
   const [error, setError] = useState("");
@@ -61,7 +61,7 @@ const LoginForm = () => {
     <div className="flex gap-10 bg-gray-200 w-full min-h-screen items-center justify-center">
       <div className="flex items-center justify-center">
         <a href="/" title="Về trang chủ">
-          <Image src="/images/logo.png" alt="logo" width={400} height={400} />
+          <Image src="/images/login.png" alt="logo" width={400} height={400} />
         </a>
       </div>
 

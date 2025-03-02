@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const News = () => {
   return (
     <div>
-        <div>
+      <div>
         <div className="bg-green-50 py-10">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center text-green-900 mb-8 ">
@@ -12,7 +12,7 @@ const News = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex">
                 <img
-                  src="https://cdn.discordapp.com/attachments/1300816466379014237/1342038651345043528/image.png?ex=67bad164&is=67b97fe4&hm=692858b01edafac0c2399c2dc7c948aadcf4f68648fc15ba84c8148286ffecb8&"
+                  src="/images/news1.png"
                   alt="Story 1"
                   className="w-1/3 rounded-lg shadow-lg"
                 />
@@ -32,7 +32,7 @@ const News = () => {
               </div>
               <div className="flex">
                 <img
-                  src="https://cdn.discordapp.com/attachments/1300816466379014237/1342039752353775647/image.png?ex=67bad26a&is=67b980ea&hm=202da6d28e34f6f448d1e3efc15ea3899dfa54f1883308584c280a31b7051fe3&"
+                  src="/images/news2.png"
                   alt="Story 2"
                   className="w-1/3 rounded-lg shadow-lg"
                 />
@@ -52,7 +52,7 @@ const News = () => {
               </div>
               <div className="flex">
                 <img
-                  src="https://cdn.discordapp.com/attachments/1300816466379014237/1342041248562806817/image.png?ex=67bad3cf&is=67b9824f&hm=24bff722a7fa481aa54bc6237490920e6eec9f8fda953da113b71b62478f0f01&"
+                  src="/images/news3.png"
                   alt="Story 3"
                   className="w-1/3 rounded-lg shadow-lg"
                 />
@@ -71,12 +71,35 @@ const News = () => {
                   </button>
                 </div>
               </div>
+              <div className="flex">
+                <img
+                  src="/images/news4.png"
+                  alt="Story 3"
+                  className="w-1/3 rounded-lg shadow-lg"
+                />
+                <div className="ml-4">
+                  <h3 className="text-xl font-semibold text-green-900">
+                    Cứu hộ bé cún ghẻ bị bỏ rơi ở Phú Thọ
+                  </h3>
+                  <p className="text-gray-600">Ngày đăng: 20/02/2024</p>
+                  <p className="text-gray-700 mt-2">
+                    Một bạn tìm thấy em chia sẽ: “hôm đi trên đường em thấy một
+                    cục gì đó đen thui lại gần mới hoảng hốt vì là một em chó
+                    trông em rất yếu. Em liền gọi cho đội cứu hộ Ps để nhờ sự
+                    giúp đở”. Hiện tại em ấy đã nuôi chú cún rất tốt và em cún
+                    rất đẹp trai.
+                  </p>
+                  <button className="mt-4 px-4 py-2 bg-green-700 text-white rounded-full">
+                    Tìm hiểu thêm
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default News
+export default News;

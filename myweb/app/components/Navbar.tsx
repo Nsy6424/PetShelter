@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="basic-2/6  ">
           <img
             className="w-52 ml-10 cursor-pointer"
-            src="https://cdn.discordapp.com/attachments/1300816466379014237/1342841389808881684/image.png?ex=67bc6b80&is=67bb1a00&hm=93b7b68967780d25771b3a0f618ef6aa320ef0ffdfd10cb03481b219c1703321&"
+            src="/images/logo.jpg"
             alt="logo"
           />
         </div>

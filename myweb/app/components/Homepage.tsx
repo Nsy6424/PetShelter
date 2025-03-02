@@ -55,7 +55,7 @@ const Homepage = () => {
         {/* Right Side - Image */}
         <div className="w-full md:w-1/2 bg-white">
           <img
-            src="https://cdn.discordapp.com/attachments/1300816466379014237/1342907209696280576/image.png?ex=67bb574c&is=67ba05cc&hm=ced9639f848fc217bfbffc90a42b9491dc73923195bb6119ed2931d7e034b236&"
+            src="/images/homepage.png"
             alt="Pet Shelter"
             className="w-50 ml-30 h-auto rounded-lg pl-20 "
           />

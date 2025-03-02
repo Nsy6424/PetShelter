@@ -4,7 +4,7 @@ import { getSession } from "./app/lib/auth";
 
 export async function middleware(request: NextRequest) {
   const session = await getSession();
-  const publicPaths = ["/"];
+  const publicPaths = "/";
   const isPublicPath = publicPaths.includes(request.nextUrl.pathname);
 
   // Allow access to home page without authentication
@@ -13,13 +13,14 @@ export async function middleware(request: NextRequest) {
   }
 
   // Protected routesm
-  if (
-    !session &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/register")
-  ) {
-    return NextResponse.redirect(new URL("/login", request.url));
-  }
+  
+  // if (
+  //   !session &&
+  //   !request.nextUrl.pathname.startsWith("/login") &&
+  //   !request.nextUrl.pathname.startsWith("/register")
+  // ) {
+  //   return NextResponse.redirect(new URL("/login", request.url));
+  // }
 
   // Admin-only routesi
   if (

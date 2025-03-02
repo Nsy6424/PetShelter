@@ -46,12 +46,7 @@ const RegisterForm = () => {
     <div className="flex gap-10 bg-gray-200 w-full min-h-screen items-center justify-center">
       <div className="flex items-center justify-center">
         <a href="/" title="Về trang chủ">
-          <img
-            src="https://cdn.discordapp.com/attachments/1300816466379014237/1343127462845874217/image.png?ex=67bc246d&is=67bad2ed&hm=06978354166f049bdb6238e81e7bfec133126f140c52a2bfe6a8ee0df888e8c5&"
-            alt="logo"
-            width={400}
-            height={400}
-          />
+          <img src="/images/login.png" alt="logo" width={400} height={400} />
         </a>
       </div>
       <div className="flex justify-center items-center  flex-col gap-5 w-[600px]">
@@ -108,7 +103,7 @@ const RegisterForm = () => {
                 className="btn bg-green-700 text-white w-[400px]"
               >
                 Tạo tài khoản
-              </button>                                                                                                                                                                                                                                                                                                                                                
+              </button>
             </div>
           </form>
         </div>
