@@ -114,7 +114,7 @@ const Navbar = () => {
               <Link href="/">Trang chủ</Link>
             </li>
             <li className="hover:text-red-400">
-              <Link href="/">Nhận Nuôi</Link>
+              <Link href={"/Adoption"}>Nhận Nuôi</Link>
             </li>
             <li className="hover:text-red-400">
               <Link href={"/Ungho"}>Ủng hộ</Link>

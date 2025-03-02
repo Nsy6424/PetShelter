@@ -21,79 +21,123 @@ const PetPage: React.FC = () => {
     },
     {
       name: "Bo",
+      breed: "Mèo",
+      color: "Nâu",
       age: "Trẻ",
-      gender: "Đực",
-      vaccine: "Chưa rõ",
+      gender: "Cái",
+      code: "C2101",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p2.png",
     },
     {
-      name: "Lili",
+      name: "Beola",
+      breed: "Chó",
+      color: "Trắng",
       age: "Trưởng thành",
-      gender: "Cái",
-      vaccine: "Đã",
+      gender: "Đực",
+      code: "C2102",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p3.png",
     },
     {
-      name: "Sura",
-      age: "Trưởng thành",
-      gender: "Cái",
-      vaccine: "Chưa rõ",
+      name: "Choco la tẻ",
+      breed: "mèo",
+      color: "Đen",
+      age: "Trẻ",
+      gender: "Đực",
+      code: "C2103",
+      vaccination: "Chưa Rõ",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p4.png",
     },
     {
-      name: "Milo",
-      age: "Trẻ",
-      gender: "Đực",
-      vaccine: "Chưa rõ",
+      name: "Ngu",
+      breed: "Mèo",
+      color: "Nâu",
+      age: "Trưởng thành",
+      gender: "Cái",
+      code: "C2104",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p5.png",
     },
     {
-      name: "Bobo",
-      age: "Trẻ",
-      gender: "Cái",
-      vaccine: "Đã",
+      name: "Xi",
+      breed: "Chó",
+      color: "Nâu",
+      age: "Trưởng thành",
+      gender: "Đực",
+      code: "C2105",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p6.png",
     },
     {
-      name: "Choco",
-      age: "Trưởng thành",
-      gender: "Cái",
-      vaccine: "Chưa rõ",
+      name: "Đần",
+      breed: "Mèo",
+      color: "Đen",
+      age: "Trẻ",
+      gender: "Đực",
+      code: "C2106",
+      vaccination: "Chưa Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p7.png",
     },
     {
-      name: "Gigi",
-      age: "Trẻ",
+      name: "Độn",
+      breed: "Chó",
+      color: "Trắng",
+      age: "Trương thành",
       gender: "Đực",
-      vaccine: "Đã",
+      code: "C2107",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p8.png",
     },
     {
-      name: "Sisi",
-      age: "Trưởng thành",
-      gender: "Cái",
-      vaccine: "Chưa rõ",
+      name: "Cuc ki",
+      breed: "Mèo",
+      color: "Đen",
+      age: "Trẻ",
+      gender: "Đực",
+      code: "C2108",
+      vaccination: "Chưa Rõ",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p9.png",
     },
     {
-      name: "Titi",
+      name: "LoLi",
+      breed: "Chó cỏ",
+      color: "Đen",
       age: "Trẻ",
-      gender: "Cái",
-      vaccine: "Chưa rõ",
+      gender: "Đực",
+      code: "C2109",
+      vaccination: "Chưa Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p10.png",
     },
     {
-      name: "Papi",
-      age: "Trưởng thành",
-      gender: "Đực",
-      vaccine: "Đã",
+      name: "Sữa",
+      breed: "Chó",
+      color: "Trắng",
+      age: "Trẻ",
+      gender: "Cái",
+      code: "C2110",
+      vaccination: "Đã Tiêm",
+      personality: "hiền lành,Năng động...",
       image: "/images/p11.png",
     },
     {
-      name: "Kiki",
-      age: "Trẻ",
+      name: "Milu",
+      breed: "Mèo",
+      color: "Trắng",
+      age: "Trưởng thành",
       gender: "Đực",
-      vaccine: "Chưa rõ",
+      code: "C2111",
+      vaccination: "Chưa Tiêm",
+      personality: "hiền lành, hơi nhút nhát",
       image: "/images/p2.png",
     },
   ];
@@ -131,7 +175,13 @@ const PetPage: React.FC = () => {
                 </h3>
                 <p className="text-gray-500">Tuổi: {product.age}</p>
                 <p className="text-gray-500">Giới tính: {product.gender}</p>
-                <p className="text-gray-500">Tiêm phòng: {product.vaccine}</p>
+                <p className="text-gray-500">
+                  Tiêm phòng: {product.vaccination}
+                </p>
+                <p className="text-gray-500">
+                  Tính cách: {product.personality}
+                </p>
+
                 <button className="mt-4 bg-green-600 text-white py-2 px-4 rounded-full hover:bg-green-700">
                   Nhận nuôi
                 </button>
@@ -160,7 +210,7 @@ const PetPage: React.FC = () => {
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
                 <Image
-                  src={product.image} // Đường dẫn hình ảnh
+                  src={product.image}
                   alt={product.name}
                   width={300}
                   height={300}
@@ -172,7 +222,10 @@ const PetPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-500">Tuổi: {product.age}</p>
                   <p className="text-gray-500">Giới tính: {product.gender}</p>
-                  <p className="text-gray-500">Tiêm phòng: {product.vaccine}</p>
+                  <p className="text-gray-500">
+                    Tiêm phòng: {product.vaccination}
+                  </p>
+
                   <button className="mt-4 bg-green-600 text-white py-2 px-4 rounded-full hover:bg-green-700">
                     Nhận nuôi
                   </button>
