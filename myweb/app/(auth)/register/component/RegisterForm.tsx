@@ -7,8 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 const RegisterForm = () => {
   const [error, setError] = useState("");
   const router = useRouter();
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) { 
     event.preventDefault();
     setError("");
     const formData = new FormData(event.currentTarget);
@@ -27,11 +26,11 @@ const RegisterForm = () => {
       return;
     }
     try {
-      const res = await fetch("/api/auth/register", {
+      const res = await fetch("/api/auth/register", { //lấy dữ liệu từ api
         method: "POST",
         body: JSON.stringify(formValues),
       });
-
+      //đăng ký thành công trả về mã 200
       if (!res.ok) {
         throw new Error("Đăng ký thất bại");
       }

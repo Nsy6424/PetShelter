@@ -11,3 +11,4 @@ export const RegisterFormSchema = z.object({
   email: z.string().email(),
 });
 export default RegisterFormSchema;
+//định dạng dữ liệu form đăng ký

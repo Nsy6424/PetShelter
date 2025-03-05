@@ -2,9 +2,10 @@ import { signUp } from "@/app/lib/auth";
 import RegisterFormSchema from "@/app/zodschema/zodregister/route";
 import { NextRequest, NextResponse } from "next/server";
 
+//hàm chạy dưới mã POST 
 export async function POST(Request: NextRequest) {
   try {
-    const body = await Request.json();
+    const body = await Request.json(); 
     const result = RegisterFormSchema.safeParse(body);
     if (!result.success) {
       return NextResponse.json(

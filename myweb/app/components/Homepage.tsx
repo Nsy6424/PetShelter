@@ -3,15 +3,6 @@ import React from "react";
 const Homepage = () => {
   return (
     <div>
-      <div className="flex mb-10">
-        <div className="relative w-1/2 pt-2 pl-20">
-          <input
-            type="text"
-            placeholder="Tìm kiếm thú cưng..."
-            className="w-full ml-20 py-3 pl-5 pr-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-      </div>
       <div className="flex flex-col md:flex-row items-center justify-between ">
         {/* Left Side - Text and Stats */}
         <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
