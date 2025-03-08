@@ -13,7 +13,7 @@ export async function middleware(request: NextRequest) {
   }
 
   // Protected routesm
-  
+
   // if (
   //   !session &&
   //   !request.nextUrl.pathname.startsWith("/login") &&

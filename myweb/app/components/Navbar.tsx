@@ -78,6 +78,14 @@ const Navbar = () => {
                   >
                     <li>
                       <div className="flex justify-around">
+                        <a href="/Profile" className="text-lg">
+                          Profile
+                        </a>
+                        <div className="text-xl pr-9">
+                          <CgProfile />
+                        </div>
+                      </div>
+                      <div className="flex justify-around">
                         <a onClick={handleLogout} className="text-lg">
                           Đăng xuất
                         </a>
@@ -102,13 +110,6 @@ const Navbar = () => {
               </div>
             </>
           )}
-          {/* <div className="flex justify-around pr-5">
-            <img
-              src="/images/notification.jpg"
-              alt="Thong Bao"
-              className="h-8 w-12 mr-8"
-            />
-          </div> */}
         </ul>
         <div className="lg:hidden size-5" onClick={toggleMenu}>
           <TiThMenuOutline />
@@ -131,11 +132,11 @@ const Navbar = () => {
               <Link href={"/Ungho"}>Ủng hộ</Link>
             </li>
             <li className="hover:text-red-400">
-              <a href="#">Sự Kiện</a>
+              <Link href="/admin">Sự Kiện</Link>
             </li>
             <li className="hover:text-red-400">
               {" "}
-              <Link href="/Productcard">Sản Phẩm</Link>{" "}
+              <Link href="#">Sản Phẩm</Link>{" "}
             </li>
             <li className="hover:text-red-400">
               <a href="#">Thú Y</a>

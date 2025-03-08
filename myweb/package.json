@@ -13,10 +13,13 @@
     "bcryptjs": "^3.0.2",
     "date-fns": "^4.1.0",
     "jose": "^5.10.0",
+    "lucide-react": "^0.477.0",
     "next": "15.1.7",
     "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0",
     "react-toastify": "^11.0.3",
     "zod": "^3.24.2"
@@ -31,7 +34,7 @@
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
     "prisma": "^6.4.1",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }

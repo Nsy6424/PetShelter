@@ -1,4 +1,6 @@
 import React from "react";
+import Navbaradmin from "../admin/components/Sidebar";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -45,6 +47,8 @@ const Footer = () => {
           </nav>
         </footer>
       </div>
+      
+
     </div>
   );
 };
