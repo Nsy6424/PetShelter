@@ -7,13 +7,13 @@ const UsersTable = () => {
       username: "tranvanteo",
       name: "Trần Văn Teo",
       email: "tranvanteo@gmail.com",
-      role: "Manager",
+      Phone: "01010101903",
     },
     {
       username: "nguyenvana",
       name: "Nguyễn Văn A",
       email: "nguyenvana@gmail.com",
-      role: "Administrator",
+      Phone: "09277711183",
     },
   ];
 
@@ -36,7 +36,7 @@ const UsersTable = () => {
             <th className="border border-gray-300 p-2">Username</th>
             <th className="border border-gray-300 p-2">Name</th>
             <th className="border border-gray-300 p-2">Email</th>
-            <th className="border border-gray-300 p-2">Role</th>
+            <th className="border border-gray-300 p-2">Phone</th>
             <th className="border border-gray-300 p-2">Action</th>
           </tr>
         </thead>
@@ -46,7 +46,7 @@ const UsersTable = () => {
               <td className="border border-gray-300 p-2">{user.username}</td>
               <td className="border border-gray-300 p-2">{user.name}</td>
               <td className="border border-gray-300 p-2">{user.email}</td>
-              <td className="border border-gray-300 p-2">{user.role}</td>
+              <td className="border border-gray-300 p-2">{user.Phone}</td>
               <td className="border border-gray-300 p-2">
                 <button className="text-blue-500">Edit</button>
               </td>
