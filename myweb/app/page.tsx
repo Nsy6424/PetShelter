@@ -9,12 +9,14 @@ import News from "./components/News";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Taitro from "./components/Taitro";
+import Menu from "./components/Menu";
 export default function Home() {
   return (
     <div>
       <Navbar></Navbar>
+      <Menu></Menu>
       <Homepage />
-      <Information/>
+      <Information />
       <Carousel />
       <Product />
       <Pet></Pet>
