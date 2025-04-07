@@ -23,14 +23,14 @@ export async function middleware(request: NextRequest) {
   // }
 
   // Admin-only routesi
-  if (
-    request.nextUrl.pathname.startsWith("/admin") &&
-    session?.vaitro !== "Admin"
-  ) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
+  // if (
+  //   request.nextUrl.pathname.startsWith("/admin") &&
+  //   session?.vaitro !== "Admin"
+  // ) {
+  //   return NextResponse.redirect(new URL("/", request.url));
+  // }
 
-  return NextResponse.next();
+  // return NextResponse.next();
 }
 
 export const config = {

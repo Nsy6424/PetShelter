@@ -47,18 +47,15 @@ const Navbar = () => {
     <div className="relative ">
       <div className="flex justify-between items-center h-16 w-full pb-2 bg-green-700">
         <div className="basic-2/6  ">
-          <img
-            className="w-52 ml-10 cursor-pointer"
-            src="/images/logo.jpg"
-            alt="logo"
-          />
+          <Link href={"/"}>
+            <img
+              className="w-52 ml-10 cursor-pointer"
+              src="/images/logo.jpg"
+              alt="logo"
+            />
+          </Link>
         </div>
         <ul className="hidden lg:flex gap-5 font-Karla items-center">
-          <img
-            src="/images/notification.jpg"
-            alt="Thong Bao"
-            className="h-8 w-8 mr-3 "
-          />
           {/* Hiển thị thông tin người dùng nếu đã đăng nhập */}
           {user ? (
             <li className="relative">
@@ -115,13 +112,13 @@ const Navbar = () => {
           <TiThMenuOutline />
         </div>
       </div>
-      <div
+      {/* <div
         className={`lg:flex flex-col lg:flex-row justify-around items-center bg-white text-black z-10 pb-3 pt-3 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
         
-      </div>
+      </div> */}
     </div>
   );
 };

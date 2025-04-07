@@ -16,14 +16,14 @@ const Menu = () => {
             <Link href={"/Ungho"}>Ủng hộ</Link>
           </li>
           <li className="hover:text-red-400">
-            <Link href="/SidePage">Sự Kiện</Link>
+            <Link href="/Sukien">Sự Kiện</Link>
           </li>
           <li className="hover:text-red-400">
             {" "}
             <Link href="#">Sản Phẩm</Link>{" "}
           </li>
           <li className="hover:text-red-400">
-            <a href="#">Thú Y</a>
+            <a href="">Thú Y</a>
           </li>
           <li className="hover:text-red-400">
             <a href="#">Liên hệ</a>

@@ -52,7 +52,7 @@ const data = {
 
 const Barchart = () => {
   return (
-    <div className="flex h-81 w-full ml-2 ">
+    <div className="flex h-50 w-full ml-2 ">
       <Bar data={data} />
     </div>
   );
